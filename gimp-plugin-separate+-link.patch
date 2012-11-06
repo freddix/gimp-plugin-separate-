@@ -1,0 +1,12 @@
+diff -aurN separate+-0.5.8.orig/Makefile separate+-0.5.8/Makefile
+--- separate+-0.5.8.orig/Makefile	2012-06-21 20:08:41.299181828 +0200
++++ separate+-0.5.8/Makefile	2012-06-21 20:10:15.756000956 +0200
+@@ -37,7 +37,7 @@
+ NLS     = -DENABLE_NLS -DGETTEXT_PACKAGE="\"$(GETTEXT_PACKAGE)\""
+ CFLAGS += $(GIMP_INCLUDE) $(GTK_INCLUDE) $(LCMS_INCLUDE) $(CM) $(NLS) \
+           -DUSE_ICC_BUTTON
+-LIBS    = $(GIMP_LIB) $(GTK_LIB) $(LCMS_LIB) $(TIFF_LIB) $(JPEG_LIB)
++LIBS    = $(GIMP_LIB) $(GTK_LIB) $(LCMS_LIB) $(TIFF_LIB) $(JPEG_LIB) -lm
+ 
+ SOURCES = $(SEPARATE_SOURCES) $(IMPORT_SOURCES) \
+           $(ICC_COLORSPACE_SOURCES) $(EXTRA_SOURCES)
